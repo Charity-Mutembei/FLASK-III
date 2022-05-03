@@ -23,30 +23,39 @@
 
 {% for articles in articles_list %} 
 
-<div class="grid">
-    <div class="col">
-        <div class="card" style="height: fit-content;">
-            <div class="card-body">
-                <!-- <h5 class="card-title">{{articles.source}}</h5> -->
-                <img src="{{articles.urlToImage}}" alt="">
-                <p class="card-text">{{articles.author}}</p>
-                <p class="card-text">{{articles.title}}</p>
-                <!-- <p class="card-text">{{articles.url}}. </p> -->
-                <a href="{{articles.url}}">link</a>
-                <!-- <p class="card-text"></p> -->
-               
-                <p class="card-text">{{articles.publishedAt}}</p>
-                <p class="card-text">{{articles.content}}</p>
-                <a href="#" class="btn btn-primary">Hello There</a>
+<!-- <div class="container"> -->
+    <div class="col" style="border: 1px solid black; margin-top: 1cm; padding: 1cm;">
+    
+        <div class="body" style="overflow-x: hidden; background-color: wheat; padding: 1cm;">
+            <h5 class="card-title"> Article Source: {{articles.source}}</h5>
+            <img src="{{articles.urlToImage}}" alt="">
+    
+            <p>
+            <div class="row">
+                <div class="col">
+                    <p class="text"> <strong>Author:</strong> {{articles.author}}</p>
+                </div>
+                <div class="col">
+                    <p class="text"><strong>Title:</strong> {{articles.title}}</p>
+                </div>
+                <div class="col">
+                    <p class="text"><strong>Publishing Date:</strong> {{articles.publishedAt}}</p>
+                </div>
             </div>
+            </p>    
+            <p class="text">{{articles.content}}</p>
+            <!-- <a href="#" class="btn btn-primary">Hello There</a> -->
+            <a href="{{articles.url}}" class="btn btn-dark" style="margin-left: 45%; border-radius: 5cm; width: 3cm;">Read More</a>
         </div>
     </div>
-
-</div>
-
-{% endfor %}  
-{% endmacro%} 
-
-
-</body>
-</html>
+    </div>
+    
+    <!-- </div> -->
+    
+    {% endfor %}
+    {% endmacro%}
+    
+    
+    </body>
+    
+    </html>

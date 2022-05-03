@@ -65,13 +65,13 @@
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             style="border-radius: 5cm;">
-                        <button class="btn btn-outline-dark" type="submit" style="border-radius: 5cm;">Search</button>
-                    </form>
+                        <button class="btn btn-outline-dark" type="submit" style="border-radius: 5cm;" [(ngModel)]="" name="name" #name="ngModel" (keyup.enter)="search()">Search</button>
+                        <!-- [(ngModel)]="username" name="name" #name="ngModel" (keyup.enter)="search()"> -->
                 </div>
             </div>
         </nav>
     </div>
-    <div class="container" id="container">
+    <div class="hey" id="container">
         <!-- <div class="image">
     
             <img src="/app/static/news.jpg" alt="">
