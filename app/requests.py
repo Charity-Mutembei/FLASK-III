@@ -16,7 +16,7 @@ def get_articles ():
         '''
     A function that gets a response for the articles body
     '''
-        get_articles_url = 'https://newsapi.org/v2/everything?q=tesla&from=2022-04-01&sortBy=publishedAt&apiKey={}'
+        get_articles_url = 'https://newsapi.org/v2/everything?q=keyword&apiKey=c3011dcec4e546228a335c5326e69378'
         with urllib.request.urlopen(get_articles_url) as url:
             get_articles_data = url.read ()
             get_articles_response = json.loads(get_articles_data)
@@ -44,7 +44,7 @@ def process_articles (articles_list):
         content = articles_items.get('content')
 
         if source:
-            articles_objects = Articles(author, title, url, urlToImage, publishedAt, content)
+            articles_objects = Articles(source, author, title, url, urlToImage, publishedAt, content)
 
             articles_results.append(articles_objects)
 

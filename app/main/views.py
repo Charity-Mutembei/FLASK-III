@@ -16,6 +16,7 @@ def index():
 
     articles = get_articles()
 
+
     title = 'News Today' 
 
     return render_template('index.html', title = title, articles = articles)
